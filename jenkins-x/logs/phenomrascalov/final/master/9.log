@@ -1,0 +1,79 @@
+
+Showing logs for build [32mphenomrascalov-final-master-jjkmj-9[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-zmp2w[0m
+{"level":"warn","ts":1585147026.4155006,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585147026.417173,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mphenomrascalov-final-master-jjkmj-9[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-9vnmt[0m
+{"level":"warn","ts":1585147027.910696,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1585147027.91179,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mphenomrascalov-final-master-jjkmj-9[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mphenomrascalov-final-master-jjkmj-9[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-phenomrascalov-final-master-jjkmj-6fkx8[0m
+{"level":"warn","ts":1585147038.281558,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585147039.9948587,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**************/final.git @ v0.0.3 in path /workspace/source"}
+
+Showing logs for build [32mphenomrascalov-final-master-jjkmj-9[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:45f03055c9b4bb8bfa9cff29d347f120e5bbefc8
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mphenomrascalov-final-master-jjkmj-9[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mphenomrascalov-final-master-jjkmj-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+/builder/home/basic-auth-user.json
+
+Showing logs for build [32mphenomrascalov-final-master-jjkmj-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+/builder/home/basic-auth-pass.json
+
+Showing logs for build [32mphenomrascalov-final-master-jjkmj-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
+rm -rf charts
+rm -rf **-app-jenkins*.tgz
+rm -rf requirements.lock
+helm init --client-only
+Creating /builder/home/.helm 
+Creating /builder/home/.helm/repository 
+Creating /builder/home/.helm/repository/cache 
+Creating /builder/home/.helm/repository/local 
+Creating /builder/home/.helm/plugins 
+Creating /builder/home/.helm/starters 
+Creating /builder/home/.helm/cache/archive 
+Creating /builder/home/.helm/repository/repositories.yaml 
+Adding stable repo with URL: https://kubernetes-charts.storage.googleapis.com 
+Adding local repo with URL: http://127.0.0.1:8879/charts 
+$HELM_HOME has been configured at /builder/home/.helm.
+Not installing Tiller due to 'client-only' flag having been set
+helm repo add jenkinsxio http://chartmuseum.jenkins-x.io
+"jenkinsxio" has been added to your repositories
+rm -rf requirements.lock
+helm dependency build **-app-jenkins
+Hang tight while we grab the latest from your chart repositories...
+...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
+	Get http://127.0.0.1:8879/charts/index.yaml: dial tcp 127.0.0.1:8879: connect: connection refused
+...Successfully got an update from the "stable" chart repository
+...Successfully got an update from the "jenkinsxio" chart repository
+Update Complete.
+Saving 4 charts
+Downloading jenkins from repo https://kubernetes-charts.storage.googleapis.com
+Downloading exposecontroller from repo http://chartmuseum.jenkins-x.io
+Downloading exposecontroller from repo http://chartmuseum.jenkins-x.io
+Downloading ** from repo http://chartmuseum.jenkins-x.io
+Deleting outdated charts
+helm lint **-app-jenkins
+==> Linting **-app-jenkins
+[WARNING] templates/: directory not found
+
+1 chart(s) linted, no failures
+sed -i -e "s/version:.*/version: 0.0.3/" **-app-jenkins/Chart.yaml
+helm package **-app-jenkins
+Successfully packaged chart and saved it to: /workspace/source/**-app-jenkins-0.0.3.tgz
+curl --fail -u *****:******************** --data-binary "@**-app-jenkins-0.0.3.tgz" http://jenkins-x-chartmuseum:8080/api/charts
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 31312    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0 31312    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100 31336    0     0  100 31312      0  15596  0:00:02  0:00:02 --:--:-- 15601
+curl: (22) The requested URL returned error: 401
+make: *** [release] Error 22
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-release'. The execution of the pipeline has stopped.[0m
