@@ -1,34 +1,34 @@
 
-Showing logs for build [32mphenomrascalov-final-master-hfhdv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-8kzpr[0m
-{"level":"warn","ts":1585171555.64351,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1585171555.6438239,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mphenomrascalov-final-master-7dbxz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-xqzxq[0m
+{"level":"warn","ts":1585221617.536331,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585221617.536791,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mphenomrascalov-final-master-hfhdv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-tfm5w[0m
-{"level":"warn","ts":1585171556.7295296,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1585171556.7309265,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mphenomrascalov-final-master-7dbxz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-l2q8w[0m
+{"level":"warn","ts":1585221618.5676413,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1585221618.5687013,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mphenomrascalov-final-master-hfhdv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mphenomrascalov-final-master-7dbxz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mphenomrascalov-final-master-hfhdv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-phenomrascalov-final-master-hfhdv-87qdg[0m
-{"level":"warn","ts":1585171563.1357205,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1585171564.3028216,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**************/final.git @ v0.0.6 in path /workspace/source"}
+Showing logs for build [32mphenomrascalov-final-master-7dbxz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-phenomrascalov-final-master-7dbxz-2ccqw[0m
+{"level":"warn","ts":1585221623.6154232,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585221624.729471,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**************/final.git @ v0.0.7 in path /workspace/source"}
 
-Showing logs for build [32mphenomrascalov-final-master-hfhdv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Showing logs for build [32mphenomrascalov-final-master-7dbxz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
 Using SHAs from PULL_REFS=master:45f03055c9b4bb8bfa9cff29d347f120e5bbefc8
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mphenomrascalov-final-master-hfhdv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mphenomrascalov-final-master-7dbxz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /builder/home/git/credentials
 
-Showing logs for build [32mphenomrascalov-final-master-hfhdv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
+Showing logs for build [32mphenomrascalov-final-master-7dbxz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
 Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
 /builder/home/basic-auth-user.json
 
-Showing logs for build [32mphenomrascalov-final-master-hfhdv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
+Showing logs for build [32mphenomrascalov-final-master-7dbxz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
 Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
 /builder/home/basic-auth-pass.json
 
-Showing logs for build [32mphenomrascalov-final-master-hfhdv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
+Showing logs for build [32mphenomrascalov-final-master-7dbxz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
 rm -rf charts
 rm -rf **-app-jenkins*.tgz
 rm -rf requirements.lock
@@ -66,11 +66,11 @@ helm lint **-app-jenkins
 [WARNING] templates/: directory not found
 
 1 chart(s) linted, no failures
-sed -i -e "s/version:.*/version: 0.0.6/" **-app-jenkins/Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.7/" **-app-jenkins/Chart.yaml
 helm package **-app-jenkins
-Successfully packaged chart and saved it to: /workspace/source/**-app-jenkins-0.0.6.tgz
-curl --fail -u *****:******************** --data-binary "@**-app-jenkins-0.0.6.tgz" http://jenkins-x-chartmuseum:8080/api/charts
+Successfully packaged chart and saved it to: /workspace/source/**-app-jenkins-0.0.7.tgz
+curl --fail -u *****:******************** --data-binary "@**-app-jenkins-0.0.7.tgz" http://jenkins-x-chartmuseum:8080/api/charts
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 31329  100    14  100 31315    244   534k --:--:-- --:--:-- --:--:--  536k
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 31324  100    14  100 31310   1373  3000k --:--:-- --:--:-- --:--:-- 3057k
 {"saved":true}rm -rf **-app-jenkins*.tgz%
